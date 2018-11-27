@@ -1,9 +1,19 @@
-<page-header>
-  <ng-template #action>
-    <button (click)="add()" nz-button nzType="primary">新建</button>
-  </ng-template>
-</page-header>
-<nz-card>
-  <sf mode="search" [schema]="searchSchema" (formSubmit)="st.reset($event)" (formReset)="st.reset($event)"></sf>
-  <st #st [data]="url" [columns]="columns"></st>
-</nz-card>
+<h1>Hello {{name}}!</h1>
+
+<input class="btn" type="button" (click)="name='there'" value="change message" />
+
+
+<div>
+	<table class="table">
+		<tr>
+			<th>Name</th>
+			<th>Points</th>
+			<th>Title</th>
+		</tr>
+		<tr *ngFor="let user of userList">
+			<td>{{user.name}}</td>
+			<td>{{user.points}}</td>
+			<td>{{user.points|rank}}</td>
+		</tr>
+	</table>
+</div>

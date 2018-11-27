@@ -7,8 +7,10 @@ import { DomTrackby1Component } from './trackby1/trackby1.component';
 import { DomTrackby2Component } from './trackby2/trackby2.component';
 import { DomMemoize1Component } from './memoize1/memoize1.component';
 import { DomMemoize2Component } from './memoize2/memoize2.component';
+import { RankPipe } from './pipe2/rank.pipe';
 
 const COMPONENTS = [
+  RankPipe,
   DomPipe1Component,
   DomPipe2Component,
   DomTrackby1Component,

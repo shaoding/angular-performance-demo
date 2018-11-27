@@ -7,39 +7,20 @@ import { SFSchema } from '@delon/form';
   selector: 'app-dom-pipe2',
   templateUrl: './pipe2.component.html',
 })
-export class DomPipe2Component implements OnInit {
-  url = `/user`;
-  searchSchema: SFSchema = {
-    properties: {
-      no: {
-        type: 'string',
-        title: '编号'
-      }
-    }
-  };
-  @ViewChild('st') st: STComponent;
-  columns: STColumn[] = [
-    { title: '编号', index: 'no' },
-    { title: '调用次数', type: 'number', index: 'callNo' },
-    { title: '头像', type: 'img', width: '50px', index: 'avatar' },
-    { title: '时间', type: 'date', index: 'updatedAt' },
-    {
-      title: '',
-      buttons: [
-        // { text: '查看', click: (item: any) => `/form/${item.id}` },
-        // { text: '编辑', type: 'static', component: FormEditComponent, click: 'reload' },
-      ]
-    }
-  ];
-
+export class DomPipe2Component {
   constructor(private http: _HttpClient, private modal: ModalHelper) { }
+  count = 1;
+  name = 'Angular';
 
-  ngOnInit() { }
-
-  add() {
-    // this.modal
-    //   .createStatic(FormEditComponent, { i: { id: 0 } })
-    //   .subscribe(() => this.st.reload());
-  }
-
+  userList = [
+    { name: 'SPA', points: 1000 },
+    { name: 'HTML', points: 850 },
+    { name: 'Angular', points: 12250 },
+    { name: 'jQuery', points: 1123 },
+    { name: 'C Sharp', points: 85 },
+    { name: 'Java', points: 1187 },
+    { name: 'Javascript', points: 8150 },
+    { name: 'FORTRAN', points: 340 },
+    { name: 'F Sharp', points: 8150 },
+    { name: 'CSS', points: 8150 }];
 }
