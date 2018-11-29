@@ -1,10 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { Memoize } from 'lodash-decorators';
 
 @Pipe({
-  name: 'rank'
+  name: 'rank2'
 })
-export class RankPipe implements PipeTransform {
-
+export class RankPipe2 implements PipeTransform {
+  @Memoize
   transform(value: any, args?: any): any {
     console.log('called');
 

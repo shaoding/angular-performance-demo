@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { _HttpClient, ModalHelper } from '@delon/theme';
-import { Memoize } from 'lodash-decorators';
 
 @Component({
   selector: 'app-dom-memoize2',
@@ -23,15 +22,4 @@ export class DomMemoize2Component {
     { name: 'FORTRAN', points: 340 },
     { name: 'F Sharp', points: 8150 },
     { name: 'CSS', points: 8150 }];
-
-  @Memoize
-  getTitle(points) {
-    console.log('called' + this.count++);
-
-    if (points < 1000)
-      return 'beginner';
-    else
-      return 'expert';
-  }
-
 }
